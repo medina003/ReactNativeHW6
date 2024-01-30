@@ -2,59 +2,31 @@ import React, { lazy } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import Card from "./Card";
+import { Image } from "expo-image";
 
 const Main = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.miniText}>Back</Text>
-        <Text style={styles.largeText}>Market</Text>
+        <Text style={styles.largeText}>Feed</Text>
         <Text style={styles.miniText}>Filter</Text>
       </View>
       <View style={styles.search}>
         <Text style={{ fontSize: 20, color: "#bfbfbf" }}>Search</Text>
       </View>
+      <View styles={styles.box}></View>
       <View>
-        <Text style={{ fontSize: 24, lineHeight: 29.05 }}>Hot deals</Text>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
       </View>
-      <View style={styles.itemsBox}>
-        <Card
-          productInfo="Информация о товаре 1"
-          imageSource="https://ispot.ru/upload/iblock/b76/195/image.jpeg"
-        ></Card>
-        <Card
-          productInfo="Информация о товаре 1"
-          imageSource="https://pbs.twimg.com/media/D_2iAI0W4AAX40e.jpg:large"
-        ></Card>
-        <Card
-          productInfo="Информация о товаре 1"
-          imageSource="https://recover-store.ru/image/cache/catalog/import_files/1c/1caefcf0302811ed903800199982a85f_73bab71634dc11ed816e00199982a85f-1000x1000.jpg"
-        ></Card>
-      </View>
-      <View>
-        <Text
-          style={{
-            fontSize: 24,
-
-            lineHeight: 29.05,
-          }}
-        >
-          Trending
-        </Text>
-      </View>
-      <View style={styles.itemsBox}>
-        <Card
-          productInfo="Информация о товаре 1"
-          imageSource="https://ispot.ru/upload/iblock/b76/195/image.jpeg"
-        ></Card>
-        <Card
-          productInfo="Информация о товаре 1"
-          imageSource="https://pbs.twimg.com/media/D_2iAI0W4AAX40e.jpg:large"
-        ></Card>
-        <Card
-          productInfo="Информация о товаре 1"
-          imageSource="https://recover-store.ru/image/cache/catalog/import_files/1c/1caefcf0302811ed903800199982a85f_73bab71634dc11ed816e00199982a85f-1000x1000.jpg"
-        ></Card>
+      <View style={styles.box}>
+        <Image
+          style={styles.image}
+          source="https://klike.net/uploads/posts/2019-12/1575281161_2.jpg"
+        ></Image>
       </View>
     </View>
   );
@@ -66,13 +38,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
   },
-  itemsBox: {
+  box: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    gap: 20,
-    marginTop: 20,
-    marginBottom: 20,
+    alignItems: "center",
+    width: "auto",
+    height: 227.98,
+    borderRadius: 8,
   },
   header: {
     width: "auto",
@@ -89,10 +60,11 @@ const styles = StyleSheet.create({
   largeText: {
     fontSize: 30,
     lineHeight: 36.31,
+    fontWeight: 600,
   },
   search: {
     padding: 10,
-    width: 370,
+    width: "100%",
     height: 50,
     borderRadius: 25,
     alignItems: "flex-start",
@@ -102,6 +74,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     marginTop: 30,
     marginBottom: 30,
+  },
+  image: {
+    flex: 1,
+    width: "100%",
+    borderRadius: 8,
   },
 });
 

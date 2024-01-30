@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   View,
   Text,
@@ -14,9 +13,14 @@ import Card from "./components/Card";
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Main></Main>
-    </View>
+    <ImageBackground
+      resizeMode="cover"
+      source="https://catherineasquithgallery.com/uploads/posts/2023-02/1676524657_catherineasquithgallery-com-p-sero-zelenii-fon-oboi-131.jpg"
+    >
+      <View style={styles.container}>
+        <Main></Main>
+      </View>
+    </ImageBackground>
   );
 };
 
