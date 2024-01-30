@@ -15,20 +15,27 @@ const Main = () => {
         <Text style={{ fontSize: 20, color: "#bfbfbf" }}>Search</Text>
       </View>
       <View>
-        <Text style={{ fontSize: 24, fontWeight: 500, lineHeight: 29.05 }}>
-          Hot deals
-        </Text>
+        <Text style={{ fontSize: 24, lineHeight: 29.05 }}>Hot deals</Text>
       </View>
       <View style={styles.itemsBox}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card
+          productInfo="Информация о товаре 1"
+          imageSource="https://ispot.ru/upload/iblock/b76/195/image.jpeg"
+        ></Card>
+        <Card
+          productInfo="Информация о товаре 1"
+          imageSource="https://pbs.twimg.com/media/D_2iAI0W4AAX40e.jpg:large"
+        ></Card>
+        <Card
+          productInfo="Информация о товаре 1"
+          imageSource="https://recover-store.ru/image/cache/catalog/import_files/1c/1caefcf0302811ed903800199982a85f_73bab71634dc11ed816e00199982a85f-1000x1000.jpg"
+        ></Card>
       </View>
       <View>
         <Text
           style={{
             fontSize: 24,
-            fontWeight: 500,
+
             lineHeight: 29.05,
           }}
         >
@@ -36,9 +43,18 @@ const Main = () => {
         </Text>
       </View>
       <View style={styles.itemsBox}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card
+          productInfo="Информация о товаре 1"
+          imageSource="https://ispot.ru/upload/iblock/b76/195/image.jpeg"
+        ></Card>
+        <Card
+          productInfo="Информация о товаре 1"
+          imageSource="https://pbs.twimg.com/media/D_2iAI0W4AAX40e.jpg:large"
+        ></Card>
+        <Card
+          productInfo="Информация о товаре 1"
+          imageSource="https://recover-store.ru/image/cache/catalog/import_files/1c/1caefcf0302811ed903800199982a85f_73bab71634dc11ed816e00199982a85f-1000x1000.jpg"
+        ></Card>
       </View>
     </View>
   );
@@ -46,6 +62,7 @@ const Main = () => {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 40,
     flex: 1,
     flexDirection: "column",
   },
@@ -67,13 +84,11 @@ const styles = StyleSheet.create({
   miniText: {
     fontSize: 16,
     lineHeight: 19.36,
-    fontWeight: 500,
     color: "#5DB075",
   },
   largeText: {
     fontSize: 30,
     lineHeight: 36.31,
-    fontWeight: 600,
   },
   search: {
     padding: 10,
