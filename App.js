@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -7,20 +8,16 @@ import {
   ImageBackground,
   Alert,
 } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigation from "./src/navigation";
 import { Image } from "expo-image";
-import Main from "./components/Main";
-import Card from "./components/Card";
+import Home from "./src/screens/Home";
 
 const App = () => {
   return (
-    <ImageBackground
-      resizeMode="cover"
-      source="https://catherineasquithgallery.com/uploads/posts/2023-02/1676524657_catherineasquithgallery-com-p-sero-zelenii-fon-oboi-131.jpg"
-    >
-      <View style={styles.container}>
-        <Main></Main>
-      </View>
-    </ImageBackground>
+    <NavigationContainer>
+      <RootNavigation />
+    </NavigationContainer>
   );
 };
 
