@@ -1,15 +1,12 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "../screens/Home";
-import Register from "../screens/Register";
-import Login from "../screens/Login";
+import List from "../screens/List";
 const Stack = createNativeStackNavigator();
-
+import AddTask from "../screens/AddTask";
 const RootNavigation = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home}></Stack.Screen>
-      <Stack.Screen name="Login" component={Login}></Stack.Screen>
-      <Stack.Screen name="Register" component={Register}></Stack.Screen>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="List" component={List}></Stack.Screen>
+      <Stack.Screen name="AddTask" component={AddTask}></Stack.Screen>
     </Stack.Navigator>
   );
 };
